@@ -28,7 +28,7 @@ header {
   position: fixed;
   width: 100%;
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-  top: 0pc;
+  top: 0px;
 }
 h1 {
   color: #fff;
@@ -92,7 +92,7 @@ li {
   letter-spacing: 1.364px;
   text-transform: uppercase;
 }
-/* citcles */
+/* circles */
 .circle {
   width: 20px;
   height: 20px;
@@ -150,6 +150,9 @@ h2 {
   letter-spacing: 1.929px;
   text-transform: uppercase;
 }
+span {
+  display: none;
+}
 .planet-image {
   width: 111px;
   height: 111px;
@@ -197,8 +200,7 @@ h3 {
   line-height: 25px; /* 208.333% */
 }
 a {
-  opacity: 0.5;
-  color: #fff;
+  color: #808080;
   font-family: Spartan;
   font-size: 12px;
   font-style: normal;
@@ -226,7 +228,7 @@ a {
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
 .name {
-  color: #fff;
+  color: #808080;
   font-family: "League Spartan", sans-serif;
   font-size: 8px;
   font-style: normal;
@@ -234,7 +236,7 @@ a {
   line-height: 16px; /* 200% */
   letter-spacing: 0.727px;
   text-transform: uppercase;
-  opacity: 0.5;
+  margin-top: 4px;
 }
 .data {
   color: #fff;
@@ -246,4 +248,130 @@ a {
   line-height: normal;
   letter-spacing: -0.75px;
   text-transform: uppercase;
+}
+@media screen and (min-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 51px;
+  }
+  .burger {
+    display: none;
+  }
+  nav {
+    position: unset;
+    border-top: unset;
+    background-color: unset;
+    margin: 39px -20px 0px -20px;
+    padding: unset;
+    animation: unset;
+    display: block;
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+  }
+  li {
+    border-bottom: unset;
+    padding-top: unset;
+    padding-bottom: unset;
+  }
+  .planet-name {
+    font-size: 11px;
+    letter-spacing: 1px;
+  }
+  /* circles */
+  .circle {
+    display: none;
+  }
+  .arrow {
+    display: none;
+  }
+  /* section */
+  section {
+    margin-top: 169px;
+    padding: 0px 39px;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-areas:
+      "planet-image planet-image"
+      "info types"
+      "facts facts";
+  }
+  .image-types {
+    flex-direction: column;
+    justify-content: unset;
+    gap: 16px;
+    border-bottom: unset;
+    margin-top: 186px;
+    padding: unset;
+    grid-area: types;
+  }
+  h2 {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 281px;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 40px;
+    text-align: left;
+    padding: 0px 20px;
+  }
+  span {
+    display: inline;
+    color: #808080;
+  }
+  .planet-image {
+    width: 184px;
+    height: 184px;
+    margin: auto;
+    margin-top: 146px;
+    grid-area: planet-image;
+  }
+
+  .information {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0px 24px;
+    margin: auto;
+    margin-top: 130px;
+    padding: unset;
+    grid-area: info;
+    margin-left: 26px;
+  }
+  h3 {
+    font-size: 48px;
+    text-align: left;
+  }
+  .text {
+    width: 339px;
+    text-align: left;
+  }
+  .source {
+    justify-content: left;
+  }
+
+  .facts {
+    flex-direction: row;
+    gap: 11px;
+    margin: auto;
+    margin-top: 27px;
+    margin-bottom: 36px;
+    grid-area: facts;
+  }
+  .fact {
+    padding: 16px 24px;
+    width: 164px;
+    height: 88px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .data {
+    font-size: 24px;
+    letter-spacing: -0.9px;
+    text-align: left;
+  }
 }
