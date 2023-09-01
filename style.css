@@ -66,6 +66,7 @@ nav {
 }
 .open {
   display: inline;
+  animation: fallDown 1s ease-in-out forwards;
 }
 ul {
   list-style: none;
@@ -317,9 +318,11 @@ a {
     text-align: left;
     padding: 0px 20px;
   }
+  .number {
+    color: #808080;
+  }
   span {
     display: inline;
-    color: #808080;
   }
   .planet-image {
     width: 184px;
@@ -373,5 +376,103 @@ a {
     font-size: 24px;
     letter-spacing: -0.9px;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 1020px) {
+  header {
+    flex-direction: row;
+    padding: 22px 48px;
+    justify-content: space-between;
+  }
+  nav {
+    margin: unset;
+    display: inline;
+    width: unset;
+  }
+  ul {
+    gap: 33px;
+  }
+  li{
+    position: relative;
+  }
+  .hover-line{
+    background-color: #419ebb;
+  }
+  li:hover .hover-line{
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    margin-top: -27.5px;
+    cursor: pointer;
+  }
+  /* section */
+  section {
+    margin-top: 0px;
+    grid-template-areas:
+      "planet-image info"
+      "planet-image types"
+      "facts facts";
+    column-gap: 299px;
+  }
+  .image-types {
+    margin-top: 39px;
+    margin-left: -14px;
+  }
+  h2 {
+    font-size: 12px;
+    letter-spacing: 2.571px;
+    width: 350px;
+    height: 48px;
+    line-height: 50px;
+  }
+  h2:hover {
+    cursor: pointer;
+    background-color: rgba(216, 216, 216, 0.2);
+  }
+  .number {
+    margin-right: 18px;
+  }
+  .planet-image {
+    width: 290px;
+    height: 290px;
+    margin-top: 242px;
+    margin-left: 150px;
+  }
+  .information {
+    margin-top: 154px;
+  }
+  h3 {
+    font-size: 80px;
+  }
+  .text {
+    width: 350px;
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .wiki {
+    font-size: 14px;
+  }
+  a {
+    font-size: 14px;
+  }
+  .facts {
+    gap: 30px;
+    margin-top: 87px;
+    margin-bottom: 49px;
+  }
+  .fact {
+    padding: 20px 23px;
+    width: 255px;
+    height: 128px;
+  }
+  .data {
+    font-size: 40px;
+    letter-spacing: -1.5px;
+  }
+  .name {
+    font-size: 11px;
+    line-height: 25px; /* 227.273% */
+    letter-spacing: 1px;
   }
 }
