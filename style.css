@@ -82,7 +82,7 @@ li {
   display: flex;
   gap: 25px;
 }
-.hover-line{
+.hover-line {
   display: none;
 }
 .planet-name {
@@ -95,8 +95,11 @@ li {
   line-height: 25px; /* 166.667% */
   letter-spacing: 1.364px;
   text-transform: uppercase;
+  opacity: 0.75;
 }
-
+.white {
+  opacity: 1;
+}
 /* circles */
 .circle {
   width: 20px;
@@ -157,11 +160,39 @@ h2 {
   text-transform: uppercase;
   padding-bottom: 16px;
 }
-.bottom-border{
-    border-bottom: 4px solid #419EBB;
+.MERCURY {
+  border-bottom: 4px solid #419ebb;
+}
+.VENUS {
+  border-bottom: 4px solid #eda249;
+}
+.EARTH {
+  border-bottom: 4px solid #6d2ed5;
+}
+.MARS {
+  border-bottom: 4px solid #d14c32;
+}
+.JUPITER {
+  border-bottom: 4px solid #d83a34;
+}
+.SATURN {
+  border-bottom: 4px solid #cd5120;
+}
+.URANUS {
+  border-bottom: 4px solid #1ec1a2;
+}
+.NEPTUNE {
+  border-bottom: 4px solid #2d68f0;
 }
 span {
   display: none;
+}
+.image-div {
+  z-index: -1;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .planet-image {
   width: 111px;
@@ -169,7 +200,11 @@ span {
   align-self: center;
   margin-top: 95px;
 }
-
+.geology {
+  width: 100px;
+  position: absolute;
+  top: 170px;
+}
 .information {
   display: flex;
   flex-direction: column;
@@ -289,10 +324,6 @@ a {
   .planet-name {
     font-size: 11px;
     letter-spacing: 1px;
-    
-  }
-  .white{
-    opacity: 1;
   }
   /* circles */
   .circle {
@@ -322,6 +353,38 @@ a {
     padding: unset;
     grid-area: types;
   }
+  .MERCURY {
+    background-color: #419ebb;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .VENUS {
+    background-color: #eda249;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .EARTH {
+    background-color: #6d2ed5;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .MARS {
+    background-color: #d14c32;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .JUPITER {
+    background-color: #d83a34;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .SATURN {
+    background-color: #cd5120;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .URANUS {
+    background-color: #1ec1a2;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  .NEPTUNE {
+    background-color: #2d68f0;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
   h2 {
     border: 1px solid rgba(255, 255, 255, 0.2);
     width: 281px;
@@ -331,15 +394,14 @@ a {
     text-align: left;
     padding: 0px 20px;
   }
-  .bottom-border{
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    background-color: #419EBB;
-  }
   .number {
-    color: #808080;
+    opacity: 0.5;
   }
   span {
     display: inline;
+  }
+  .image-div {
+    margin-right: 160px;
   }
   .planet-image {
     width: 184px;
@@ -348,7 +410,9 @@ a {
     margin-top: 146px;
     grid-area: planet-image;
   }
-
+  .geology {
+    top: 270px;
+  }
   .information {
     display: flex;
     flex-direction: column;
@@ -410,21 +474,25 @@ a {
   ul {
     gap: 33px;
   }
-  li{
+  li {
     position: relative;
     cursor: pointer;
   }
-  .planet-name{
+  .planet-name {
     opacity: 0.75;
   }
-  .white{
+  .white {
     opacity: 1;
   }
-  .hover-line{
+  .hover-line {
     background-color: #419ebb;
     display: inline;
   }
-  li:hover .hover-line{
+  .hover-line {
+    background-color: #419ebb;
+    display: inline;
+  }
+  li:hover .hover-line {
     width: 100%;
     height: 4px;
     position: absolute;
@@ -458,11 +526,20 @@ a {
   .number {
     margin-right: 18px;
   }
+  .image-div{
+    margin: unset;
+  }
   .planet-image {
     width: 290px;
     height: 290px;
     margin-top: 242px;
     margin-left: 150px;
+  }
+  .geology {
+    top: 480px;
+    left: 215px;
+    width: 163px;
+    height: 199px;
   }
   .information {
     margin-top: 154px;
