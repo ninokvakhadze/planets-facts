@@ -109,7 +109,7 @@ function choosePlanet(i){
 }
 // choose planets
 const line = document.querySelectorAll(".hover-line");
-const mediaQuery = window.matchMedia("(max-width: 768px)");
+const mediaQuery = window.matchMedia("(max-width: 767px)");
 let number = 0
 let type = 0
 for (let i = 0; i < lidiv.length; i++) {

@@ -408,10 +408,12 @@ a {
     height: 184px;
     margin: auto;
     margin-top: 146px;
+    margin-right: -220px;
     grid-area: planet-image;
   }
   .geology {
     top: 270px;
+    left: 310px;
   }
   .information {
     display: flex;
@@ -534,10 +536,11 @@ a {
     height: 290px;
     margin-top: 242px;
     margin-left: 150px;
+    margin-right: unset;
   }
   .geology {
     top: 480px;
-    left: 215px;
+    left: 225px;
     width: 163px;
     height: 199px;
   }
